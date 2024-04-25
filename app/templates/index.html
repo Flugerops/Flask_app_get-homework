@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Homework</title>
+    <link rel="stylesheet" href="static/index.css">
+</head>
+<body>
+    <h1>Погода</h1>
+    <form action="/weather" method="post">
+        <label for="city">Місто:</label>
+        <select id="city" name="city">
+            {% for city in popular_cities %}
+                <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Переглянути</button>
+    </form>
+</body>
+</html>
